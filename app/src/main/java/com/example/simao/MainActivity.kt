@@ -1,26 +1,20 @@
 package com.example.simao
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.EditText
-
-const val EXTRA_MESSAGE = "com.example.simao.MESSAGE"
+import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
+    var allButtons = arrayOfNulls<Button>(4)
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-    }
-
-    fun sendMessage(view: View) {
-        val editText = findViewById<EditText>(R.id.editText)        
-        val message = editText.text.toString()
-        val intent = Intent(this, DisplayMessageActivity::class.java).apply {
-            putExtra(EXTRA_MESSAGE, message)
-        }
-        startActivity(intent)
+        
+        allButtons[0] = findViewById<Button>(R.id.btn_green)
+        allButtons[1] = findViewById<Button>(R.id.btn_red)
+        allButtons[2] = findViewById<Button>(R.id.btn_yellow)
+        allButtons[3] = findViewById<Button>(R.id.btn_blue)
     }
 }

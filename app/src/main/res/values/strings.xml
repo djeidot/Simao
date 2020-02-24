@@ -2,4 +2,8 @@
     <string name="app_name">Simao</string>
     <string name="edit_message">Enter a message</string>
     <string name="button_send">Send</string>
+    <string name="green">Green</string>
+    <string name="red">Red</string>
+    <string name="yellow">Yellow</string>
+    <string name="blue">Blue</string>
 </resources>
